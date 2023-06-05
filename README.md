@@ -8,7 +8,8 @@ My name is Yuri and I'm a Computer Scientist in Galicia, northwest of Spain.
 ## The Game
 The main objective of Bomb Flip is to flip cards without uncovering a Bomb. The cards contain numbers from 1 to 3 or a Bomb. The player must use logic and deduction to identify which cards are safe to flip based on numeric clues provided by rows and columns.
 
-<br>
+<br> 
+Design Prototype:
 <div style="text-align:center" align="center">
   <img src="https://github.com/juanyuri/figures/blob/main/bomb-flip/bombflip.png?raw=true" width="400" height="400" />
 </div>

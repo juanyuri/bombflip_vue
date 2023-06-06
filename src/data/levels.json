@@ -1,0 +1,25 @@
+[
+    {
+    "1":
+        [
+            {
+                "num_two": 3,
+                "num_three": 1,
+                "num_bombs": 6,
+                "num_coins": 24
+            },
+            {
+                "num_two": 0,
+                "num_three": 3,
+                "num_bombs": 6,
+                "num_coins": 24
+            },
+            {
+                "num_two": 5,
+                "num_three": 0,
+                "num_bombs": 6,
+                "num_coins": 24
+            }
+        ]
+    }
+]

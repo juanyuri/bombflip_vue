@@ -1,7 +1,6 @@
 <template>
     <div>TotalCounter</div>
     <input type="number" v-model="contador">
-    <p>{{ contador }}</p>
 </template>
   
 <script setup>
@@ -11,6 +10,7 @@ import { computed } from 'vue';
 
 let counter = ref(0)
 
+/* writable computed property */
 const contador = computed({
     get() {
         return counter.value

@@ -3,14 +3,18 @@
 -->
 
 <template>
-
+    <p>{{ cardValue }}</p>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
+import { defineProps } from 'vue'
+
+const props = defineProps(['cardValue'])
+console.log(props)
 
 let isHidden = ref(true)
 let isSuspicious = ref(false)
-console.log(isHidden + isSuspicious)
+console.log(isHidden.value + isSuspicious.value)
 
 </script>

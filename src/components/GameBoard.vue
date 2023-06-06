@@ -3,22 +3,24 @@
 -->
 
 <template>
-    <div id="gameContainer">
-        <p>Nivel: {{ level }}</p>
-        <p>{{ level_data }}</p>
+  <p>Nivel: {{ level }}</p>
+  <p>{{ level_data }}</p>
 
-    <!-- Tablero -->
-    <div class="board">
-      <div v-for="(row, rowIndex) in board" :key="'row-' + rowIndex" class="board-row">
-        <GameCard
-          v-for="(cell, colIndex) in row"
-          :key="'cell-' + rowIndex + '-' + colIndex"
-          :cardValue="cell"
-          :class="'cell-' + rowIndex + '-' + colIndex"
-        />
+  <div class="container">
+    <div id="gameContainer">
+      <div class="board">
+        <div v-for="(row, rowIndex) in board" :key="'row-' + rowIndex" class="board-row">
+          <GameCard
+            v-for="(cell, colIndex) in row"
+            :key="'cell-' + rowIndex + '-' + colIndex"
+            :cardValue="cell"
+          />
+        </div>
       </div>
+
     </div>
-    </div>
+  </div>
+    
 </template>
 
 <script setup>
@@ -96,11 +98,38 @@ initBoard()
 
 
 <style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height:100vh; /* Ocupa al menos toda la altura visible*/
+}
+
+.markdown-body{
+    font-family: var(--fuente);
+    
+}
+
+#gameContainer{
+  width: var(--total-width-table);
+  height: var(--total-height-table);
+  box-sizing:border-box;
+  
+  -webkit-touch-callout:none;   /*iOS Safari*/
+  -webkit-user-select:none;     /*Safari */
+  user-select:none;/*Non-prefixed version,currently supported by Chrome, Edge, Opera and Firefox*/
+
+  background-color:var(--tablero-color);
+  border-radius :var( --rounding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(5, auto);
+  gap: var(--grid-gap);
 }
-.board-row {
-  display: contents;
-}
+
 </style>
